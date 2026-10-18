@@ -1,0 +1,136 @@
+# =============================================================================
+# CMake
+# =============================================================================
+
+# Build directories
+/build/
+/build-*/
+/cmake-build-*/
+
+# CMake-generated files
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+CTestTestfile.cmake
+CPackConfig.cmake
+CPackSourceConfig.cmake
+install_manifest.txt
+compile_commands.json
+Makefile
+
+# CMake-generated build systems
+build.ninja
+.ninja_deps
+.ninja_log
+.ninja_log.*
+
+# =============================================================================
+# Compiler and linker artifacts
+# =============================================================================
+
+# Object files
+*.o
+*.obj
+*.lo
+
+# Static libraries
+*.a
+*.lib
+*.la
+
+# Shared libraries
+*.so
+*.so.*
+*.dylib
+*.dll
+
+# Executables
+*.exe
+*.out
+*.app
+
+# Debug information
+*.pdb
+*.ilk
+*.dSYM/
+*.dwo
+*.dwp
+
+# Precompiled headers
+*.gch
+*.pch
+
+# Dependency files
+*.d
+
+# =============================================================================
+# Testing and coverage
+# =============================================================================
+
+Testing/
+coverage/
+*.gcda
+*.gcno
+*.gcov
+*.profraw
+*.profdata
+coverage.info
+
+# =============================================================================
+# IDE and editor files
+# =============================================================================
+
+# Visual Studio
+.vs/
+*.suo
+*.user
+*.VC.db
+*.VC.opendb
+
+# Visual Studio Code
+.vscode/
+
+# CLion / JetBrains
+.idea/
+
+# Vim
+*.swp
+*.swo
+*~
+Session.vim
+
+# Emacs
+*#
+.#*
+
+# =============================================================================
+# Operating system files
+# =============================================================================
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+# =============================================================================
+# Temporary files and logs
+# =============================================================================
+
+*.log
+*.tmp
+*.temp
+*.bak
+*.orig
+*.rej
+
+# =============================================================================
+# Crash dumps
+# =============================================================================
+
+core
+core.*
+*.core
