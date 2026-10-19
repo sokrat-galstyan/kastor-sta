@@ -1,0 +1,35 @@
+name: Task
+description: A planned unit of work (small enough to finish in a day or two)
+title: "[Task] "
+labels: ["task"]
+body:
+  - type: textarea
+    id: goal
+    attributes:
+      label: Goal
+      description: What should be true when this task is finished? One or two sentences.
+    validations:
+      required: true
+  - type: textarea
+    id: done-when
+    attributes:
+      label: Done when
+      description: A checklist. Each item must be something you can check.
+      value: |
+        - [ ]
+        - [ ] Tests added or updated (if the change has behavior)
+        - [ ] Documents updated (README / ADR / requirements / architecture / CHANGELOG)
+    validations:
+      required: true
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notes
+      description: Links, constraints, ideas. Optional.
+    validations:
+      required: false
+  - type: markdown
+    attributes:
+      value: |
+        When you finish, close the issue with a **Resolution** comment.
+        The template is in `docs/process/workflow.md`.

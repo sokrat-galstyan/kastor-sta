@@ -1,0 +1,37 @@
+name: Research question
+description: A time-boxed question that ends with a research note (and maybe an ADR)
+title: "[Research] "
+labels: ["research"]
+body:
+  - type: textarea
+    id: question
+    attributes:
+      label: Question
+      description: One specific question. "How does NLDM table lookup work?" is good. "Learn STA" is too big.
+    validations:
+      required: true
+  - type: input
+    id: timebox
+    attributes:
+      label: Time box
+      description: The most time you will spend before you stop and write down what you know.
+      placeholder: "for example: 4 hours"
+    validations:
+      required: true
+  - type: textarea
+    id: sources
+    attributes:
+      label: Planned public sources
+      description: Papers, textbooks, documentation of open-source tools. Public sources only.
+    validations:
+      required: false
+  - type: textarea
+    id: output
+    attributes:
+      label: Expected output
+      value: |
+        - [ ] Research note in `docs/research/`
+        - [ ] Worked example with real numbers (if it applies)
+        - [ ] ADR or requirement updated (if a decision follows)
+    validations:
+      required: true
