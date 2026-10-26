@@ -1,0 +1,7 @@
+Reopen a closed milestone.
+
+USAGE
+    scripts/github-issues.sh milestone reopen NUMBER [--dry-run | --yes]
+
+EXAMPLE
+    scripts/github-issues.sh milestone reopen 3 --dry-run

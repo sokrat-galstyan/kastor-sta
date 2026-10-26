@@ -1,0 +1,11 @@
+Remove a native parent/child relationship.
+
+USAGE
+    scripts/github-issues.sh issue unlink NUMBER --parent NUMBER
+        [--dry-run | --yes]
+
+REQUIRED OPTIONS
+    --parent NUMBER  The current parent to detach from.
+
+EXAMPLE
+    scripts/github-issues.sh issue unlink 42 --parent 10 --dry-run

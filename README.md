@@ -70,6 +70,8 @@ Progress is tracked in the issue tracker milestones (see below).
   | Architecture | `docs/architecture.md` (planned) |
   | Process, labels, resolution template | `docs/process/workflow.md` |
 
+- **Terminal issue management:** [interactive GitHub Issue Manager](docs/process/github-issues-cli.md)
+  provides guided forms, resolution comments, native sub-issues, and read-only reports.
 - **Commits:** [Conventional Commits](https://www.conventionalcommits.org/) style
   (`feat:`, `fix:`, `docs:`, `build:`, `ci:`, `test:`, ...).
 - **Versions:** [Semantic Versioning](https://semver.org/). Versions `0.y.z` are

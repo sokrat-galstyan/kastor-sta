@@ -1,0 +1,137 @@
+{
+  "$comment": "Kastor issue forms, label policy, and source drift checks.",
+  "schema": 1,
+  "epic_label": "epic",
+  "blocked_label": "blocked",
+  "milestone_description_required": true,
+  "forms": {
+    "task": {
+      "title_prefix": "[Task] ",
+      "labels": [
+        "task"
+      ],
+      "fields": [
+        {
+          "id": "goal",
+          "label": "Goal",
+          "required": true,
+          "help": "What should be true when this task is finished? One or two sentences.",
+          "default": ""
+        },
+        {
+          "id": "done-when",
+          "label": "Done when",
+          "required": true,
+          "help": "A checklist. Each item must be something you can check.",
+          "default": "- [ ]\n- [ ] Tests added or updated (if the change has behavior)\n- [ ] Documents updated (README / ADR / requirements / architecture / CHANGELOG)\n"
+        },
+        {
+          "id": "notes",
+          "label": "Notes",
+          "required": false,
+          "help": "Links, constraints, ideas. Optional.",
+          "default": ""
+        }
+      ]
+    },
+    "research": {
+      "title_prefix": "[Research] ",
+      "labels": [
+        "research"
+      ],
+      "fields": [
+        {
+          "id": "question",
+          "label": "Question",
+          "required": true,
+          "help": "One specific question. \"How does NLDM table lookup work?\" is good. \"Learn STA\" is too big.",
+          "default": ""
+        },
+        {
+          "id": "timebox",
+          "label": "Time box",
+          "required": true,
+          "help": "The most time you will spend before you stop and write down what you know.",
+          "default": ""
+        },
+        {
+          "id": "sources",
+          "label": "Planned public sources",
+          "required": false,
+          "help": "Papers, textbooks, documentation of open-source tools. Public sources only.",
+          "default": ""
+        },
+        {
+          "id": "output",
+          "label": "Expected output",
+          "required": true,
+          "help": "",
+          "default": "- [ ] Research note in `docs/research/`\n- [ ] Worked example with real numbers (if it applies)\n- [ ] ADR or requirement updated (if a decision follows)\n"
+        }
+      ]
+    },
+    "bug": {
+      "title_prefix": "[Bug] ",
+      "labels": [
+        "bug"
+      ],
+      "fields": [
+        {
+          "id": "what",
+          "label": "What happened",
+          "required": true,
+          "help": "What did you do, what did you expect, what did you get?",
+          "default": ""
+        },
+        {
+          "id": "reproduce",
+          "label": "How to reproduce",
+          "required": true,
+          "help": "Exact commands and input files. A small input is best.",
+          "default": ""
+        },
+        {
+          "id": "version",
+          "label": "Version or commit",
+          "required": true,
+          "help": "",
+          "default": ""
+        },
+        {
+          "id": "environment",
+          "label": "Environment",
+          "required": false,
+          "help": "OS, compiler and version, CMake version, build type.",
+          "default": ""
+        }
+      ]
+    },
+    "epic": {
+      "title_prefix": "[Epic] ",
+      "labels": [
+        "epic"
+      ],
+      "fields": [
+        {
+          "id": "goal",
+          "label": "Goal",
+          "required": true,
+          "help": "The objective of this Epic.",
+          "default": ""
+        },
+        {
+          "id": "done-when",
+          "label": "Done when",
+          "required": true,
+          "help": "Observable acceptance criteria for reviewing this Epic.",
+          "default": ""
+        }
+      ]
+    }
+  },
+  "source_hashes": {
+    ".github/ISSUE_TEMPLATE/task.yml": "34e3b5e2f0f6b6eeaec50cae8027439c1edf8ea0030b16eef95138112c8a73c4",
+    ".github/ISSUE_TEMPLATE/research.yml": "220781c7bbff56f794e81fb4d8318c4480be4e42ef1e7ac7cfc64a52269812bb",
+    ".github/ISSUE_TEMPLATE/bug.yml": "132401f4ab0f7294e30432ac451008ac726da1f35b86e6338083900f8ab5d3df"
+  }
+}

@@ -1,0 +1,16 @@
+Attach an issue to a parent Epic using a native sub-issue relationship.
+
+USAGE
+    scripts/github-issues.sh issue link NUMBER --parent NUMBER
+        [--move] [--dry-run | --yes]
+
+OPTIONS
+    --parent NUMBER  Required parent Epic; must be open and share a milestone.
+    --move           Explicitly allow moving from an existing parent.
+
+EXAMPLE
+    scripts/github-issues.sh issue link 42 --parent 10 --dry-run
+
+NOTES
+    Requires a workflow adapter. Cycles and duplicate relationships are
+    rejected. A move can partially succeed; inspect failures before retrying.

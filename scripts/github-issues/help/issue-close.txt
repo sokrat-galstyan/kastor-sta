@@ -1,0 +1,35 @@
+Record a structured resolution and close an issue when appropriate.
+
+USAGE
+    scripts/github-issues.sh issue close NUMBER --outcome OUTCOME
+        --summary TEXT --evidence TEXT --docs TEXT --followups TEXT
+        [OPTIONS] [--dry-run | --yes]
+
+REQUIRED OPTIONS
+    --outcome OUTCOME  done, wont-do, duplicate, superseded, or failed.
+    --summary TEXT     Explain what happened and why.
+    --evidence TEXT    Describe verification or link supporting evidence.
+    --docs TEXT        Document changes, or explain why none are needed.
+    --followups TEXT   List remaining work, or explicitly state none.
+
+OPTIONS
+    --target NUMBER   Required for duplicate and superseded outcomes.
+    --exception TEXT  Explain closing as done despite unchecked work,
+                      a blocked label, open children, or open blockers.
+
+OUTCOMES
+    done              Close as completed.
+    wont-do           Close as not planned.
+    duplicate         Mark a native duplicate of --target and close.
+    superseded        Reference --target and close as not planned.
+    failed            Record progress; leave the issue open.
+
+EXAMPLE
+    scripts/github-issues.sh issue close 42 --outcome done \
+        --summary "Documented parser input" \
+        --evidence "Reviewed the worked example" \
+        --docs "Updated the parser guide" --followups "None" --dry-run
+
+NOTES
+    A resolution comment is posted before closing. If a later step fails,
+    inspect the issue before retrying; previous writes are not rolled back.

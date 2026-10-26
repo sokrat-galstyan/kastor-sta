@@ -1,0 +1,19 @@
+Show factual issue timeline events in a recent time window.
+
+USAGE
+    scripts/github-issues.sh activity [--since DATE | --last Nd] [FILTERS]
+        [OUTPUT OPTIONS]
+
+OPTIONS
+    --since DATE     Start date in YYYY-MM-DD format (UTC).
+    --last Nd        Look back N days, for example 14d; default: 7d.
+    --format FORMAT  table (default), compact, details, markdown, json.
+
+EXAMPLES
+    scripts/github-issues.sh activity --last 14d
+    scripts/github-issues.sh activity --since 2026-10-01 --assignee alice
+
+NOTES
+    Choose --since or --last. Supports issue filters (see help filters),
+    but always considers all issue states. The time window determines the
+    updated-after filter. Do not use --state or --updated-after here.

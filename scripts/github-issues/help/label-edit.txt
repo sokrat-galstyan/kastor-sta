@@ -1,0 +1,16 @@
+Rename a repository label or update its metadata.
+
+USAGE
+    scripts/github-issues.sh label edit NAME [OPTIONS] [--dry-run | --yes]
+
+OPTIONS
+    --name NEW_NAME     Rename the label identified by the positional NAME.
+    --color HEX         Six-digit hexadecimal color, without '#'.
+    --description TEXT  Replace the label description.
+
+EXAMPLE
+    scripts/github-issues.sh label edit "needs review" \
+        --name "ready for review" --dry-run
+
+NOTES
+    Supply at least one change. Renaming affects every use of the label.

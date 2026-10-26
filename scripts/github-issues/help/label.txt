@@ -1,0 +1,18 @@
+Manage repository labels.
+
+USAGE
+    scripts/github-issues.sh label COMMAND [NAME] [OPTIONS]
+
+COMMANDS
+    list        List repository labels.
+    create      Create a label with a name and color.
+    edit        Rename a label or change its color or description.
+    delete      Delete a label from the repository and all issues.
+
+EXAMPLES
+    scripts/github-issues.sh label list --format details
+    scripts/github-issues.sh label edit --help
+
+MORE HELP
+    Quote names containing spaces, for example "needs review".
+    Append --help to any command above for its options and examples.

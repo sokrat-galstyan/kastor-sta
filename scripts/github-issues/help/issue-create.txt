@@ -1,0 +1,37 @@
+Create an issue from a workflow form.
+
+USAGE
+    scripts/github-issues.sh issue create --category CATEGORY --title TEXT
+        --milestone NUMBER --parent NUMBER|none --field ID=TEXT ...
+        [OPTIONS] [--dry-run | --yes]
+
+REQUIRED OPTIONS
+    --category CATEGORY  task, research, bug, or epic in the Kastor adapter.
+    --title TEXT         Meaningful title; the form adds its title prefix.
+    --milestone NUMBER   Open milestone to assign.
+    --parent NUMBER|none Parent Epic, or explicitly none for standalone work.
+    --field ID=TEXT      Form field; repeat for distinct required field IDs.
+
+FORM FIELDS (KASTOR)
+    task, epic   goal, done-when
+    research     question, timebox, output; optional: sources
+    bug          what, reproduce, version; optional: environment
+    task also accepts optional notes.
+    Required fields and categories come from the selected adapter.
+
+OPTIONS
+    --field-file ID=PATH  Read a field from a text file instead of --field.
+    --area NAME           Add the area label.
+    --assignee USER       Assign a GitHub login.
+    --label NAME          Add a label; repeat for multiple labels.
+
+EXAMPLE
+    scripts/github-issues.sh issue create --category task \
+        --title "Document parser input" --milestone 3 --parent none \
+        --field goal="Explain the accepted input format" \
+        --field 'done-when=- [ ] Add a worked example' --dry-run
+
+NOTES
+    Requires a workflow adapter. Kastor uses the bundled adapter; select
+    --config PATH for another repository. Preview first, then replace
+    --dry-run with --yes to create the issue.

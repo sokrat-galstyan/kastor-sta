@@ -1,0 +1,11 @@
+Post a Markdown comment to an issue.
+
+USAGE
+    scripts/github-issues.sh issue comment NUMBER --body-file PATH
+        [--dry-run | --yes]
+
+REQUIRED OPTIONS
+    --body-file PATH  Read the comment from this text file.
+
+EXAMPLE
+    scripts/github-issues.sh issue comment 42 --body-file update.md --dry-run

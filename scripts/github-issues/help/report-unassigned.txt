@@ -1,0 +1,12 @@
+Find open issues with no assignee.
+
+USAGE
+    scripts/github-issues.sh report unassigned [FILTERS]
+        [OUTPUT OPTIONS]
+
+SCOPE
+    Always uses open state and the no-assignee filter.
+    Supports issue filters (see help filters); keep the required state above.
+
+EXAMPLE
+    scripts/github-issues.sh report unassigned --format json

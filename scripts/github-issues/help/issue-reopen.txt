@@ -1,0 +1,7 @@
+Reopen a closed issue.
+
+USAGE
+    scripts/github-issues.sh issue reopen NUMBER [--dry-run | --yes]
+
+EXAMPLE
+    scripts/github-issues.sh issue reopen 3 --dry-run

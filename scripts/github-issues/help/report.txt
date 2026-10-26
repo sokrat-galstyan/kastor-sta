@@ -1,0 +1,21 @@
+Find work that needs attention and review completed work.
+
+USAGE
+    scripts/github-issues.sh report NAME [OPTIONS]
+
+REPORTS
+    blocked               Open issues carrying the blocked label.
+    unassigned            Open issues with no assignee.
+    completed             Issues closed as completed in a time window.
+    milestones            Open milestones with incomplete work.
+    missing-resolutions   Closed issues without a valid resolution comment.
+    hierarchy             Audit parent/child relationships across all states.
+    workflow-check        Audit workflow metadata across all states.
+
+EXAMPLES
+    scripts/github-issues.sh report completed --last 14d
+    scripts/github-issues.sh report blocked --milestone 3
+    scripts/github-issues.sh report hierarchy --help
+
+MORE HELP
+    Append --help to a report name for its scope and supported options.

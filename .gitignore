@@ -134,3 +134,6 @@ Desktop.ini
 core
 core.*
 *.core
+
+# Bash module, not a crash dump.
+!/scripts/github-issues/core.sh

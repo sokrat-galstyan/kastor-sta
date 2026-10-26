@@ -1,0 +1,20 @@
+Plan work and manage milestone deadlines.
+
+USAGE
+    scripts/github-issues.sh milestone COMMAND [NUMBER] [OPTIONS]
+
+COMMANDS
+    list        Find milestones by state, deadline, or completion.
+    view        Show one milestone.
+    create      Create a milestone with a title and description.
+    edit        Update the title, description, or deadline.
+    close       Close a milestone, checking for remaining open work.
+    reopen      Reopen a closed milestone.
+
+EXAMPLES
+    scripts/github-issues.sh milestone list --overdue
+    scripts/github-issues.sh milestone view 3 --format details
+    scripts/github-issues.sh milestone create --help
+
+MORE HELP
+    Append --help to any command above for its options and examples.

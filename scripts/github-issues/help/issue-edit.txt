@@ -1,0 +1,25 @@
+Update an existing issue. Supply at least one change.
+
+USAGE
+    scripts/github-issues.sh issue edit NUMBER [OPTIONS] [--dry-run | --yes]
+
+OPTIONS
+    --title TEXT          Replace the title.
+    --body-file PATH      Replace the entire Markdown body from a file.
+    --field ID=TEXT       Update a form field; repeat for distinct IDs.
+    --field-file ID=PATH  Read a field update from a text file.
+    --toggle N            Toggle a top-level checkbox by its 1-based index.
+    --label NAME          Add a label; repeat for multiple labels.
+    --remove-label NAME   Remove a label; repeat for multiple labels.
+    --milestone NUMBER    Assign a milestone; use none to clear it.
+    --assignee USER       Replace the assignee; use none to clear assignment.
+
+EXAMPLES
+    scripts/github-issues.sh issue edit 42 --label bug --dry-run
+    scripts/github-issues.sh issue view 42 --checklist
+    scripts/github-issues.sh issue edit 42 --toggle 1 --yes
+
+NOTES
+    --body-file cannot be combined with field updates or --toggle.
+    Field updates require an adapter. Ambiguous structured edits are refused;
+    use --body-file with a reviewed full body when necessary.

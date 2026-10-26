@@ -1,0 +1,28 @@
+Create, inspect, and organize GitHub issues.
+
+USAGE
+    scripts/github-issues.sh issue COMMAND [NUMBER] [OPTIONS]
+
+COMMANDS
+    list        Find issues by state, labels, milestone, or assignee.
+    view        Show one issue, optionally with comments and relationships.
+    create      Create an issue using a configured form.
+    edit        Update fields, labels, assignment, or checklist items.
+    close       Record a structured resolution and close an issue.
+    reopen      Reopen a closed issue.
+    comment     Post a comment from a Markdown file.
+    tree        Display the native parent/child issue hierarchy.
+    link        Attach an issue to a parent Epic.
+    unlink      Detach an issue from its parent.
+    block       Record a blocker and add the blocked label.
+    unblock     Record why work can resume and remove the blocked label.
+    depend      Add a native blocking dependency.
+    undepend    Remove a native blocking dependency.
+
+EXAMPLES
+    scripts/github-issues.sh issue list --state open --label bug
+    scripts/github-issues.sh issue view 42 --relationships
+    scripts/github-issues.sh issue edit --help
+
+MORE HELP
+    Append --help to any command above for its options and examples.

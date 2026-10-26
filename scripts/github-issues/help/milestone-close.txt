@@ -1,0 +1,15 @@
+Close a milestone after checking its remaining open work.
+
+USAGE
+    scripts/github-issues.sh milestone close NUMBER [--exception TEXT]
+        [--dry-run | --yes]
+
+OPTIONS
+    --exception TEXT  Required explanation if issues or pull requests remain
+                      open in this milestone.
+
+EXAMPLE
+    scripts/github-issues.sh milestone close 3 --dry-run
+
+NOTES
+    Closing a milestone does not close its issues or pull requests.

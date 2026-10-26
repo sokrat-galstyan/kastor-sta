@@ -1,0 +1,15 @@
+Explain why work can resume and remove the configured blocked label.
+
+USAGE
+    scripts/github-issues.sh issue unblock NUMBER --summary TEXT
+        [--dry-run | --yes]
+
+REQUIRED OPTIONS
+    --summary TEXT  Explanation, posted as a comment.
+
+EXAMPLE
+    scripts/github-issues.sh issue unblock 42 \
+        --summary "The input schema is available" --dry-run
+
+NOTES
+    Native dependencies remain. Use issue undepend to remove a dependency.

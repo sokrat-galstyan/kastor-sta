@@ -1,0 +1,13 @@
+Update a milestone. Supply at least one change.
+
+USAGE
+    scripts/github-issues.sh milestone edit NUMBER [OPTIONS]
+        [--dry-run | --yes]
+
+OPTIONS
+    --title TEXT        Replace the title.
+    --description TEXT  Replace the description.
+    --due DATE|none     Set the deadline (YYYY-MM-DD), or clear it with none.
+
+EXAMPLE
+    scripts/github-issues.sh milestone edit 3 --due none --dry-run

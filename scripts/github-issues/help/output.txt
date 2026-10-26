@@ -1,0 +1,27 @@
+Output and export reference.
+
+OPTIONS
+    --format FORMAT  Display format; default: table (issue view: details).
+    --limit N        Return at most N list items; default: 100.
+    --all            Return all matching list items; cannot use with --limit.
+    --output PATH    Write output to a file instead of standard output.
+    --force          Allow --output to overwrite an existing file.
+    --no-color       Accepted for compatibility; output has no ANSI colors.
+
+FORMATS
+    Lists and views  titles, compact, table, details, json, csv, markdown.
+    Issue trees      tree, table, details, markdown, json.
+    Status/activity  table, compact, details, markdown, json.
+    Audit reports    table, compact, details, markdown, json.
+
+NOTES
+    Command help lists the applicable formats and pagination options.
+    Issue view defaults to details; milestone view defaults to table.
+    Limits apply after fetching and filtering all pages from GitHub.
+    JSON lists include total_matches, count, and items.
+    Use JSON or details for full milestone and label metadata.
+    --format, --limit, and --all are unavailable for writes.
+
+EXAMPLES
+    scripts/github-issues.sh issue list --all --format json
+    scripts/github-issues.sh issue list --format csv --output issues.csv

@@ -1,0 +1,21 @@
+Find issues matching a set of filters.
+
+USAGE
+    scripts/github-issues.sh issue list [FILTERS] [OUTPUT OPTIONS]
+
+COMMON FILTERS
+    --state STATE        open (default), closed, or all.
+    --milestone VALUE    Milestone number or exact title.
+    --label NAME         Require this label; repeat for additional labels.
+    --assignee USER      Filter by GitHub login.
+    --search TEXT        Literal, case-insensitive title/body search.
+    --sort FIELD         number (default), title, created, updated, comments.
+    --direction ORDER    desc (default) or asc.
+
+EXAMPLES
+    scripts/github-issues.sh issue list --label bug --no-assignee
+    scripts/github-issues.sh issue list --state all --milestone 3
+    scripts/github-issues.sh issue list --all --format json
+
+MORE FILTERS
+    Run scripts/github-issues.sh help filters for the full filter reference.

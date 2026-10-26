@@ -1,0 +1,17 @@
+List open milestones that still have open work.
+
+USAGE
+    scripts/github-issues.sh report milestones [OPTIONS]
+
+OPTIONS
+    --state STATE       open (default), closed, or all.
+    --search TEXT       Literal, case-insensitive milestone title search.
+    --sort FIELD        number (default), title, due_on, created, updated.
+    --direction ORDER   asc (default) or desc.
+
+EXAMPLE
+    scripts/github-issues.sh report milestones --format details
+
+NOTES
+    Always filters for incomplete milestones. Counts include pull requests.
+    For deadline filters, use milestone list --incomplete instead.

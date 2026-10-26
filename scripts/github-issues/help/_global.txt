@@ -1,0 +1,6 @@
+GLOBAL OPTIONS
+    --repo OWNER/REPO  GitHub.com repository; default: Git origin.
+    --config PATH     Workflow adapter; bundled automatically for Kastor.
+    -h, --help         Show this help without contacting GitHub.
+    --output PATH     Export to a file; add --force to overwrite it.
+    --no-color        Accepted; all output is already plain text.

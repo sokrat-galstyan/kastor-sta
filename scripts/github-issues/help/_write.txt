@@ -1,0 +1,4 @@
+WRITE SAFETY
+    --dry-run  Read, validate, and preview without applying changes.
+    --yes      Apply the write; required for non-interactive writes.
+    If both are supplied, --dry-run takes precedence.

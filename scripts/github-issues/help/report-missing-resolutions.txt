@@ -1,0 +1,12 @@
+Find closed issues missing a valid resolution comment.
+
+USAGE
+    scripts/github-issues.sh report missing-resolutions [FILTERS]
+        [OUTPUT OPTIONS]
+
+SCOPE
+    Always uses closed state; inspects resolution comments.
+    Supports issue filters (see help filters); keep the required state above.
+
+EXAMPLE
+    scripts/github-issues.sh report missing-resolutions --format json

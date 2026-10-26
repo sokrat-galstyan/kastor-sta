@@ -1,0 +1,35 @@
+Issue filter reference.
+
+USAGE
+    scripts/github-issues.sh issue list [FILTERS] [OUTPUT OPTIONS]
+
+FILTERS
+    --state STATE         open (default), closed, or all.
+    --milestone VALUE     Milestone number or exact title.
+    --no-milestone        Issues without a milestone.
+    --category LABEL      Category label, such as task, research, bug, epic.
+    --area NAME           Area name, using the workflow's area convention.
+    --label NAME          Require a label; repeat to require ALL labels.
+    --assignee USER       GitHub login, for example alice (not @me).
+    --no-assignee         Issues without an assignee.
+    --author USER         GitHub login of the issue's author.
+    --parent NUMBER|none  Direct children of a parent, or issues without one.
+    --blocked             Issues carrying the configured blocked label.
+    --search TEXT         Literal, case-insensitive title/body search.
+    --created-after DATE  Created on or after DATE (YYYY-MM-DD, UTC).
+    --updated-after DATE  Updated on or after DATE (YYYY-MM-DD, UTC).
+    --reason REASON       completed, not_planned, or duplicate.
+
+SORTING
+    --sort FIELD          number (default), title, created, updated, comments.
+    --direction ORDER     desc (default) or asc.
+
+NOTES
+    Filters are combined. Do not combine --milestone with --no-milestone,
+    or --assignee with --no-assignee. Use --state closed with --reason.
+    Search is literal text, not GitHub's search-query language.
+    Other commands document their own filter exceptions in --help.
+
+EXAMPLES
+    scripts/github-issues.sh issue list --label bug --no-assignee
+    scripts/github-issues.sh issue list --state closed --reason completed

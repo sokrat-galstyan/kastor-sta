@@ -1,0 +1,13 @@
+Explain why work cannot proceed and add the configured blocked label.
+
+USAGE
+    scripts/github-issues.sh issue block NUMBER --summary TEXT
+        [--target NUMBER] [--dry-run | --yes]
+
+OPTIONS
+    --summary TEXT   Required explanation, posted as a comment.
+    --target NUMBER  Also add this issue as a native blocking dependency.
+
+EXAMPLE
+    scripts/github-issues.sh issue block 42 \
+        --summary "Waiting for the input schema" --target 12 --dry-run

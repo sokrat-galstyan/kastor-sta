@@ -1,0 +1,3 @@
+OUTPUT OPTIONS
+    --format FORMAT  titles, compact, table, details, json, csv, or markdown.
+                     Issue view defaults to details; milestone view to table.

@@ -1,0 +1,15 @@
+Audit issue metadata and native parent/child relationships.
+
+USAGE
+    scripts/github-issues.sh report workflow-check [FILTERS]
+        [OUTPUT OPTIONS]
+
+SCOPE
+    Always uses all states; currently shares the hierarchy audit checks.
+    Supports issue filters (see help filters); keep the required state above.
+
+OUTPUT
+    --format FORMAT  table (default), compact, details, markdown, json.
+
+EXAMPLE
+    scripts/github-issues.sh report workflow-check --format json

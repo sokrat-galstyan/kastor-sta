@@ -1,0 +1,43 @@
+GitHub Issue Manager
+Manage issues, milestones, and labels from your terminal.
+
+USAGE
+    scripts/github-issues.sh [GLOBAL OPTIONS] COMMAND [OPTIONS]
+    scripts/github-issues.sh [--repo OWNER/REPO]
+
+    With no command, start the interactive menu.
+    NUMBER means a positive issue or milestone number, without '#'.
+    Square brackets mark optional arguments; uppercase words are values.
+
+COMMANDS
+    issue       Create, find, update, and organize issues.
+    milestone   Plan work and manage milestone deadlines.
+    label       List, create, rename, and delete labels.
+    status      Summarize issue progress and milestone counts.
+    activity    Show recent issue timeline events.
+    report      Find blocked work, completed work, and workflow problems.
+    help        Show help for a command or reference topic.
+
+EXAMPLES
+    scripts/github-issues.sh issue list --assignee alice
+    scripts/github-issues.sh issue view 42 --comments
+    scripts/github-issues.sh --repo OWNER/REPO status
+    scripts/github-issues.sh issue create --help
+
+GLOBAL OPTIONS
+    --repo OWNER/REPO   GitHub.com repository; defaults to Git origin.
+    --config PATH      Workflow adapter; bundled automatically for Kastor.
+    -h, --help         Show help without contacting GitHub.
+
+WRITE SAFETY
+    --dry-run          Validate and preview a write without applying it.
+    --yes              Apply a non-interactive write; required for writes.
+    Dry runs still read GitHub. With both flags, --dry-run takes precedence.
+
+MORE HELP
+    scripts/github-issues.sh help issue
+    scripts/github-issues.sh help issue close
+    scripts/github-issues.sh help filters
+    scripts/github-issues.sh help output
+
+    Full guide: docs/process/github-issues-cli.md

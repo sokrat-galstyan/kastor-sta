@@ -1,0 +1,12 @@
+Find open issues carrying the configured blocked label.
+
+USAGE
+    scripts/github-issues.sh report blocked [FILTERS]
+        [OUTPUT OPTIONS]
+
+SCOPE
+    Always uses open state. Does not infer a label from dependencies.
+    Supports issue filters (see help filters); keep the required state above.
+
+EXAMPLE
+    scripts/github-issues.sh report blocked --format json

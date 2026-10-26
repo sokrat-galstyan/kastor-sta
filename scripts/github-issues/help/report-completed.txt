@@ -1,0 +1,16 @@
+Find issues actually closed as completed in a time window.
+
+USAGE
+    scripts/github-issues.sh report completed [FILTERS]
+        [OUTPUT OPTIONS]
+
+SCOPE
+    Always uses closed state and the completed closing reason.
+    Supports issue filters (see help filters); keep the required state above.
+
+TIME WINDOW
+    --since DATE  Closed on or after DATE (YYYY-MM-DD, UTC).
+    --last Nd     Closed within N days; default: 7d. Choose one time option.
+
+EXAMPLE
+    scripts/github-issues.sh report completed --format json

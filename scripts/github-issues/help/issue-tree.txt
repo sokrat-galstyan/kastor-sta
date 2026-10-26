@@ -1,0 +1,19 @@
+Display native parent/child issue relationships as a tree.
+
+USAGE
+    scripts/github-issues.sh issue tree [FILTERS] [OPTIONS]
+
+OPTIONS
+    --parent NUMBER  Show a subtree, including the selected parent.
+    --depth N        Maximum traversal depth; default: 100.
+    --state STATE    open (default), closed, or all.
+    --format FORMAT  tree, table (default), details, markdown, or json.
+                     Text formats show a tree; JSON returns the graph.
+
+EXAMPLES
+    scripts/github-issues.sh issue tree --state all
+    scripts/github-issues.sh issue tree --parent 42 --depth 3
+
+NOTES
+    Supports issue filters (see help filters). Unlike issue list, --parent
+    includes the parent itself. --limit is unsupported for trees.

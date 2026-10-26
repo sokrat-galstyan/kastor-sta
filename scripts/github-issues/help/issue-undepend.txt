@@ -1,0 +1,15 @@
+Remove a native blocking dependency.
+
+USAGE
+    scripts/github-issues.sh issue undepend NUMBER --target NUMBER
+        [--dry-run | --yes]
+
+REQUIRED OPTIONS
+    --target NUMBER  The blocker: issue NUMBER depends on this target.
+
+EXAMPLE
+    scripts/github-issues.sh issue undepend 42 --target 12 --dry-run
+
+NOTES
+    This changes the dependency relationship, not the blocked label.
+    Use issue block or issue unblock to change that label.

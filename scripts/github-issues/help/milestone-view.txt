@@ -1,0 +1,11 @@
+Show one milestone and its progress counts.
+
+USAGE
+    scripts/github-issues.sh milestone view NUMBER [OUTPUT OPTIONS]
+
+EXAMPLES
+    scripts/github-issues.sh milestone view 3 --format details
+    scripts/github-issues.sh milestone view 3 --format json
+
+NOTES
+    Default format: table. Counts include issues and pull requests.

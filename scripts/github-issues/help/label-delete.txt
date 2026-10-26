@@ -1,0 +1,15 @@
+Delete a label from the repository and remove it from every issue.
+
+USAGE
+    scripts/github-issues.sh label delete NAME --confirm-name NAME
+        [--dry-run | --yes]
+
+REQUIRED OPTIONS
+    --confirm-name NAME  Must exactly match the positional label name.
+
+EXAMPLE
+    scripts/github-issues.sh label delete "obsolete label" \
+        --confirm-name "obsolete label" --dry-run
+
+NOTES
+    To remove a label from only one issue, use issue edit --remove-label.

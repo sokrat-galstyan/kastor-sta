@@ -1,0 +1,19 @@
+Summarize issue progress and repository milestone counts.
+
+USAGE
+    scripts/github-issues.sh status [FILTERS] [OUTPUT OPTIONS]
+
+OPTIONS
+    --milestone VALUE  Scope issues to a milestone number or exact title.
+    --assignee USER    Scope issues to a GitHub login.
+    --label NAME       Require a label; repeat to require all named labels.
+    --format FORMAT    table (default), compact, details, markdown, json.
+
+EXAMPLES
+    scripts/github-issues.sh status
+    scripts/github-issues.sh status --milestone 3 --format json
+
+NOTES
+    Supports issue filters (see help filters). Always includes open and closed
+    issues; omit --state or use all. --limit is unsupported.
+    Milestone counts remain repository-wide when issue filters are supplied.

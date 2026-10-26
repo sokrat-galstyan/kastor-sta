@@ -1,0 +1,15 @@
+Audit native parent/child relationships for inconsistencies.
+
+USAGE
+    scripts/github-issues.sh report hierarchy [FILTERS]
+        [OUTPUT OPTIONS]
+
+SCOPE
+    Always uses all states. Findings describe relationships to review.
+    Supports issue filters (see help filters); keep the required state above.
+
+OUTPUT
+    --format FORMAT  table (default), compact, details, markdown, json.
+
+EXAMPLE
+    scripts/github-issues.sh report hierarchy --format json

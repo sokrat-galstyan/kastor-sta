@@ -1,0 +1,14 @@
+Create a milestone for a planned unit of work.
+
+USAGE
+    scripts/github-issues.sh milestone create --title TEXT
+        --description TEXT [--due DATE|none] [--dry-run | --yes]
+
+OPTIONS
+    --title TEXT        Required milestone title.
+    --description TEXT  Purpose and scope; required by the Kastor adapter.
+    --due DATE|none     Deadline in YYYY-MM-DD format; default: no deadline.
+
+EXAMPLE
+    scripts/github-issues.sh milestone create --title "Parser MVP" \
+        --description "Read and validate the initial input format" --dry-run

@@ -1,0 +1,15 @@
+Show one issue, including its full Markdown body by default.
+
+USAGE
+    scripts/github-issues.sh issue view NUMBER [OPTIONS]
+
+OPTIONS
+    --comments       Include issue comments.
+    --resolution     Include structured resolution information.
+    --checklist      Include numbered top-level checklist items.
+    --relationships  Include native parent, children, and blockers.
+
+EXAMPLES
+    scripts/github-issues.sh issue view 42
+    scripts/github-issues.sh issue view 42 --comments --relationships
+    scripts/github-issues.sh issue view 42 --checklist --format json

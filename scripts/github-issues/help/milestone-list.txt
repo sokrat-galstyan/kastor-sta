@@ -1,0 +1,25 @@
+Find milestones by state, deadline, or completion.
+
+USAGE
+    scripts/github-issues.sh milestone list [OPTIONS]
+
+FILTERS
+    --state STATE       open (default), closed, or all.
+    --search TEXT       Literal, case-insensitive title search.
+    --due-before DATE   Due strictly before DATE (YYYY-MM-DD).
+    --due-after DATE    Due strictly after DATE (YYYY-MM-DD).
+    --overdue           Open milestones past the due date.
+    --no-due            No due date assigned.
+    --incomplete        Has open items.
+    --complete          Has no open items; cannot combine with --incomplete.
+
+SORTING
+    --sort FIELD        number (default), title, due_on, created, updated.
+    --direction ORDER   asc (default) or desc.
+
+EXAMPLES
+    scripts/github-issues.sh milestone list --overdue --incomplete
+    scripts/github-issues.sh milestone list --state all --sort due_on
+
+NOTES
+    GitHub milestone counts include pull requests as well as issues.

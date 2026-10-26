@@ -1,0 +1,6 @@
+OUTPUT OPTIONS
+    --format FORMAT  table (default), titles, compact, details, json, csv,
+                     or markdown. See help output for format notes.
+    --limit N        Maximum displayed items; default: 100.
+    --all            Show all matches; cannot be combined with --limit.
+    Limits apply after all GitHub pages have been fetched and filtered.

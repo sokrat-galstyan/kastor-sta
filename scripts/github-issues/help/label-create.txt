@@ -1,0 +1,14 @@
+Create a repository label.
+
+USAGE
+    scripts/github-issues.sh label create --name NAME --color HEX
+        [--description TEXT] [--dry-run | --yes]
+
+OPTIONS
+    --name NAME         Required label name; quote names containing spaces.
+    --color HEX         Required six-digit hexadecimal color, without '#'.
+    --description TEXT  Short explanation of when to use the label.
+
+EXAMPLE
+    scripts/github-issues.sh label create --name "needs review" \
+        --color fbca04 --description "Ready for review" --dry-run
