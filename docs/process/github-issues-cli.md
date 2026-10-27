@@ -75,13 +75,17 @@ with the form; an out-of-date adapter fails closed. No YAML parser is needed.
 | epic | `goal`, `done-when` | none |
 
 The Epic form is an explicit CLI default, since no checked-in Epic issue form
-exists. Research defaults retain the research-note, worked-example and ADR
-expectations. The Bug's **What happened** field includes expected behavior;
+exists. Research defaults cover answers with public sources, limitations,
+applicable supporting artifacts and experiments, and resulting decisions.
+The Bug's **What happened** field includes expected behavior;
 it has no separate expected-behavior section. Empty checkboxes and placeholder-only
 required values are rejected. Replace the Task form's blank checklist starter.
-Non-interactive field values are supplied explicitly, including required fields
-with defaults; interactive mode offers those defaults. Title prefixes are offered
-interactively and are not silently prepended to explicit command-line titles.
+Research outputs and time-box handling follow the
+[research guide](research.md); a focused main question may have explicit
+supporting questions. Non-interactive field values are supplied explicitly,
+including required fields with defaults; interactive mode offers those
+defaults. Title prefixes are offered interactively and are not silently
+prepended to explicit command-line titles.
 
 ```bash
 ./scripts/github-issues.sh issue create \

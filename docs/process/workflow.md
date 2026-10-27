@@ -29,6 +29,19 @@ Milestone   a time-boxed goal (one to a few weeks)
   Later milestones get an epic and nothing more.
 - If a task grows beyond about two days, split it.
 
+## Research work
+
+Follow the [research outputs and reproducibility guide](research.md), recorded
+in [ADR-0006](../adr/0006-research-outputs.md). Each research issue has one
+focused main question, explicit supporting questions where needed, a time box,
+and observable outputs. Its primary note links to any supporting calculations,
+inputs, scripts, and reports. Conceptual research does not require code.
+
+Answer every agreed question before declaring the research complete. A time
+box is a checkpoint: record findings and reassess or split unfinished work;
+it does not automatically satisfy completion criteria. Keep note summaries
+concise and store detailed evidence in linked artifacts.
+
 ## Labels
 
 | Label | Meaning |

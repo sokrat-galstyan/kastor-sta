@@ -1,0 +1,10 @@
+{
+  "unit": "ps",
+  "startpoint": "input",
+  "arrival_ps": 10,
+  "segments": [
+    {"endpoint": "gate_a_out", "delay_ps": 20},
+    {"endpoint": "gate_b_in", "delay_ps": 5},
+    {"endpoint": "output", "delay_ps": 30}
+  ]
+}

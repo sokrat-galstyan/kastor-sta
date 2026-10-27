@@ -44,14 +44,14 @@
           "id": "question",
           "label": "Question",
           "required": true,
-          "help": "One specific question. \"How does NLDM table lookup work?\" is good. \"Learn STA\" is too big.",
+          "help": "One focused main question, with numbered supporting questions in learning order if needed. State scope and exclusions; keep the work to roughly one or two days.",
           "default": ""
         },
         {
           "id": "timebox",
           "label": "Time box",
           "required": true,
-          "help": "The most time you will spend before you stop and write down what you know.",
+          "help": "Time before recording findings and reassessing unfinished work. Expiration does not complete unanswered questions; revise the time box or split the scope explicitly.",
           "default": ""
         },
         {
@@ -65,8 +65,8 @@
           "id": "output",
           "label": "Expected output",
           "required": true,
-          "help": "",
-          "default": "- [ ] Research note in `docs/research/`\n- [ ] Worked example with real numbers (if it applies)\n- [ ] ADR or requirement updated (if a decision follows)\n"
+          "help": "Follow docs/process/research.md. Keep applicable outputs and specify evidence; conceptual research does not require scripts.",
+          "default": "- [ ] Primary note answers every agreed question with public sources\n- [ ] Assumptions, limitations, and out-of-scope open questions recorded\n- [ ] Artifacts linked and experiments reproduced (if applicable)\n- [ ] ADR or requirement updated (if a decision follows)\n"
         }
       ]
     },
@@ -131,7 +131,7 @@
   },
   "source_hashes": {
     ".github/ISSUE_TEMPLATE/task.yml": "34e3b5e2f0f6b6eeaec50cae8027439c1edf8ea0030b16eef95138112c8a73c4",
-    ".github/ISSUE_TEMPLATE/research.yml": "220781c7bbff56f794e81fb4d8318c4480be4e42ef1e7ac7cfc64a52269812bb",
+    ".github/ISSUE_TEMPLATE/research.yml": "7b6110322eeb519225d1f4e2ab60ea7ac2ad0edba6b73b6b3de8bbaf0c4aada4",
     ".github/ISSUE_TEMPLATE/bug.yml": "132401f4ab0f7294e30432ac451008ac726da1f35b86e6338083900f8ab5d3df"
   }
 }

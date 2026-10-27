@@ -7,14 +7,20 @@ body:
     id: question
     attributes:
       label: Question
-      description: One specific question. "How does NLDM table lookup work?" is good. "Learn STA" is too big.
+      description: >-
+        One focused main question, with numbered supporting questions in
+        learning order if needed. State scope and exclusions; keep the work to
+        roughly one or two days.
     validations:
       required: true
   - type: input
     id: timebox
     attributes:
       label: Time box
-      description: The most time you will spend before you stop and write down what you know.
+      description: >-
+        Time before recording findings and reassessing unfinished work.
+        Expiration does not complete unanswered questions; revise the time box
+        or split the scope explicitly.
       placeholder: "for example: 4 hours"
     validations:
       required: true
@@ -29,9 +35,13 @@ body:
     id: output
     attributes:
       label: Expected output
+      description: >-
+        Follow docs/process/research.md. Keep applicable outputs and specify
+        evidence; conceptual research does not require scripts.
       value: |
-        - [ ] Research note in `docs/research/`
-        - [ ] Worked example with real numbers (if it applies)
+        - [ ] Primary note answers every agreed question with public sources
+        - [ ] Assumptions, limitations, and out-of-scope open questions recorded
+        - [ ] Artifacts linked and experiments reproduced (if applicable)
         - [ ] ADR or requirement updated (if a decision follows)
     validations:
       required: true

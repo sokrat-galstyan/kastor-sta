@@ -1,0 +1,6 @@
+{
+  "input": 10,
+  "gate_a_out": 30,
+  "gate_b_in": 35,
+  "output": 65
+}

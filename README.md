@@ -66,9 +66,16 @@ Progress is tracked in the issue tracker milestones (see below).
   |---|---|
   | Decisions (ADRs) | `docs/adr/` |
   | Research notes | `docs/research/` |
+  | Research experiments and evidence | `experiments/` |
   | Requirements per version | `docs/requirements/` |
   | Architecture | `docs/architecture.md` (planned) |
   | Process, labels, resolution template | `docs/process/workflow.md` |
+
+- **Research results:** the [research guide](docs/process/research.md) describes
+  expected outputs, storage, reproducibility, and completion. Use the
+  [research-note template](docs/research/template.md) to record findings.
+  The convention is recorded in accepted
+  [ADR-0006](docs/adr/0006-research-outputs.md).
 
 - **Terminal issue management:** [interactive GitHub Issue Manager](docs/process/github-issues-cli.md)
   provides guided forms, resolution comments, native sub-issues, and read-only reports.
